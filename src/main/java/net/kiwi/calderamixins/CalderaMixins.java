@@ -9,31 +9,24 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import net.minecraft.world.entity.player.Player;
 
-// The value here should match an entry in the META-INF/mods.toml file
-@Mod(CalderaMixins.MOD_ID)
+
+//not sure why SHItems is red, probably gotta import something but I've got no idea what
+@Mixin(SHItems.class)
 public class CalderaMixins {
-    // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "calderamixins";
-    // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
-
-    public CalderaMixins() {
-        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
-        // Register the commonSetup method for modloading
-        modEventBus.addListener(this::commonSetup);
-
-        // Register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this);
-    }
-
-    private void commonSetup(final FMLCommonSetupEvent event) {
-
-    }
-
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
-
+    @Inject(
+            //not sure what to put here
+            method = {""},
+            remap = true,
+            cancellable = true,
+            at = @At(value = "HEAD")
+    )
+    private static int levelCostToUseHeartCrystal(Player player) {
+        return 0;
     }
 }

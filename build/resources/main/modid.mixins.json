@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "calderamixins.java",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "modid.refmap.json",
+  "mixins": [
+    "MixinItemEntity"
+  ],
+  "client": [
+  ],
+  "minVersion": "0.8"
+}
