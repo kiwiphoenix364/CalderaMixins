@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Specification-Title: calderamixins
+Specification-Vendor: kiwi
+Specification-Version: 1
+Implementation-Title: calderamixins
+Implementation-Version: 1.0-1.20.1
+Implementation-Vendor: kiwi
+Implementation-Timestamp: 2024-08-20T23:08:37-0400
+MixinConfigs: mmodid.mixins.json
+

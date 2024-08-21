@@ -1,0 +1,7 @@
+Java Launcher: /home/kiwi/.gradle/jdks/eclipse_adoptium-17-amd64-linux/jdk-17.0.12+7/bin/java
+Arguments: '--inJar, /home/kiwi/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.20/forge-1.20.1-47.2.20-injected.jar, --outJar, /home/kiwi/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.20_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.2.20_mapped_parchment_2023.09.03-1.20.1.jar, --logFile, accesstransform.log, --atFile, /home/kiwi/Downloads/calderamixins/build/_atJar_4/parent_at.cfg'
+Classpath:
+ - /home/kiwi/.gradle/caches/forge_gradle/maven_downloader/net/minecraftforge/accesstransformers/8.2.0/accesstransformers-8.2.0-fatjar.jar
+Working directory: /home/kiwi/Downloads/calderamixins/build/_atJar_4
+Main class: net.minecraftforge.accesstransformer.TransformerProcessor
+====================================
