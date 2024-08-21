@@ -68,7 +68,7 @@ dependencies {
 mixin {
     disableRefMapWarning = true
     add sourceSets.main, 'calderamixins.mixin.refmap.json'
-    config 'calderamixins.mixins.json'
+    config 'modid.mixins.json'
 }
 
 tasks.named('processResources', ProcessResources).configure {
