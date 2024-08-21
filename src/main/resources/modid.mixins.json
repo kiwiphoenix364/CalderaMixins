@@ -1,12 +1,14 @@
 {
   "required": true,
-  "package": "calderamixins.java",
-  "compatibilityLevel": "JAVA_8",
-  "refmap": "modid.refmap.json",
+  "minVersion": "0.8",
+  "package": "net.kiwi.calderamixins.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "calderamixins.mixin.refmap.json",
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  },
   "mixins": [
-    "MixinItemEntity"
-  ],
-  "client": [
-  ],
-  "minVersion": "0.8"
+    "CrystalLevelMixin"
+  ]
 }

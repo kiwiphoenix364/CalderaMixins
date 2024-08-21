@@ -10,21 +10,14 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod(CalderaMixins.MOD_ID)
 public class CalderaMixins {
-    // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "calderamixins";
-    // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public CalderaMixins() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
-        // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
-
-        // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
 

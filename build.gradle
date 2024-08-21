@@ -62,12 +62,13 @@ repositories {}
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
-    // compileOnly fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}")
-    // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
+    compileOnly fileTree(dir: 'libs', include: '*.jar')
 }
+
 mixin {
-    add sourceSets.main, 'modid.refmap.json'
-    config 'mmodid.mixins.json'
+    disableRefMapWarning = true
+    add sourceSets.main, 'calderamixins.mixin.refmap.json'
+    config 'calderamixins.mixins.json'
 }
 
 tasks.named('processResources', ProcessResources).configure {
