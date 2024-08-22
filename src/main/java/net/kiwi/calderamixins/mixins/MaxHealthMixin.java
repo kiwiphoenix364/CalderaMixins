@@ -17,8 +17,8 @@ public abstract class MaxHealthMixin {
      * @author kiwi
      * @reason Make max health be limited to 40
      */
-    @Inject(method = "maxHeartCrystals", remap = false, at = @At("HEAD"), cancellable = true)
-    private static void maxHeartCrystals(CallbackInfoReturnable<Integer> cir) {
-        cir.setReturnValue(Math.min(maxHealth(),20) - startingHealth() / (2 * SHItems.heartCrystalIncreaseAmount()));
+    @Inject(method = "maxHealth", remap = false, at = @At("HEAD"), cancellable = true)
+    private static void maxHealth(CallbackInfoReturnable<Integer> cir) {
+        cir.setReturnValue(40);
     }
 }
